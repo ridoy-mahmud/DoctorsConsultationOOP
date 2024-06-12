@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HealthConsultant">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/HealthConsultant.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
