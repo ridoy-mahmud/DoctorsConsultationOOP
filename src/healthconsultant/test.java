@@ -13,10 +13,7 @@ public class test extends javax.swing.JFrame {
         initComponents();
     }
 
-    // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
         home = new javax.swing.JDesktopPane();
         healthCalculatorBTN = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -127,17 +124,6 @@ public class test extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
-        // jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A,
-        // java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        // jMenuItem3.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        // // jMenuItem3.setText("About");
-        // // jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-        // // public void actionPerformed(java.awt.event.ActionEvent evt) {
-        // // jMenuItem3ActionPerformed(evt);
-        // // }
-        // // });
-        // jMenu1.add(jMenuItem3);
-
         jMenuItem4.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jMenuItem4.setText("Source Code");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -158,7 +144,7 @@ public class test extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu3.setText("Help   ");
+        jMenu3.setText("Statistics   ");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -169,6 +155,7 @@ public class test extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
         setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -181,25 +168,25 @@ public class test extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+        setVisible(true); // Added this line to make sure the frame is visible
+    }
 
-    private void healthCalculatorBTNMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_healthCalculatorBTNMouseClicked
+    private void healthCalculatorBTNMouseClicked(java.awt.event.MouseEvent evt) {
         health obj = new health();
         obj.setVisible(true);
-    }// GEN-LAST:event_healthCalculatorBTNMouseClicked
+    }
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {
         health obj = new health();
         obj.setVisible(true);
-    }// GEN-LAST:event_jMenuItem1ActionPerformed
+    }
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
         dengueTest obj = new dengueTest();
         obj.setVisible(true);
-    }// GEN-LAST:event_jMenuItem2ActionPerformed
+    }
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem5ActionPerformed
-
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {
         int flag = JOptionPane.showConfirmDialog(null, "Do you want to exit the program?", "Confirmation",
                 JOptionPane.YES_NO_OPTION);
         if (flag == JOptionPane.YES_OPTION) {
@@ -207,46 +194,32 @@ public class test extends javax.swing.JFrame {
         }
     }
 
-    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jMenu3MouseClicked
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {
         help object = new help();
         object.setVisible(true);
-    }// GEN-LAST:event_jMenu3MouseClicked
+    }
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {
         try {
-            // TODO add your handling code here:
             Desktop.getDesktop().browse(new URI("#"));
         } catch (URISyntaxException | IOException ex) {
             Logger.getLogger(test.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }// GEN-LAST:event_jMenuItem4ActionPerformed
+    }
 
-    private void dengueTestBTNMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_dengueTestBTNMouseClicked
+    private void dengueTestBTNMouseClicked(java.awt.event.MouseEvent evt) {
         dengueTest obj2 = new dengueTest();
         obj2.setVisible(true);
-    }// GEN-LAST:event_dengueTestBTNMouseClicked
+    }
 
-    public static void main(String args[]) {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
-                | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(test.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+    public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new test().setVisible(true);
             }
         });
-
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dengueTestBTN;
     private javax.swing.JLabel healthCalculatorBTN;
     private javax.swing.JDesktopPane home;
@@ -268,5 +241,4 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    // End of variables declaration//GEN-END:variables
 }
